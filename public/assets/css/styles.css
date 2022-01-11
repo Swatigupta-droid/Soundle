@@ -1,8 +1,11 @@
 body{
     text-align: center;
-    background-color: #DDEEDF;
+    background-color: #8bc34a;
     font-family: 'Raleway', sans-serif;
+   
 }
+
+/*-------HEADER--------*/
 #header
 {
     max-height: 60px;
@@ -41,7 +44,7 @@ body{
 {
     text-decoration: none;
     margin: 0 20px;
-    color:#8BC34A;
+    color:#DDEEDF;
 }
 
 .login button
@@ -53,5 +56,6 @@ body{
     background-color:black;
     color: wheat;
 }
+/*----------HOME PAGE -------*/
 
 
