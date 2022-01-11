@@ -1,0 +1,57 @@
+body{
+    text-align: center;
+    background-color: #DDEEDF;
+    font-family: 'Raleway', sans-serif;
+}
+#header
+{
+    max-height: 60px;
+    display: flex;
+    flex: 1;
+    margin: 15px 30px;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+#img img
+{
+    max-height: 80px;
+    max-width: 150px;
+}
+
+#list
+{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+}
+
+#list >ul
+{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+#list a
+{
+    text-decoration: none;
+    margin: 0 20px;
+    color:#8BC34A;
+}
+
+.login button
+{
+    border: none;
+    padding: 7px 9px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color:black;
+    color: wheat;
+}
+
+
