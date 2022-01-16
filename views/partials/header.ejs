@@ -37,61 +37,69 @@
 </head>
 
 <body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container">
+      <div class="header-container d-flex align-items-center justify-content-between" id="container">
+        <div class="logo">
+          <h1 class="text-light" id=logo><a href="/"><span>SOUNDLE</span></a></h1>
 
-  <header >
+        </div>
 
-      <div id=header>
-          <div id=img>
-            <img src="assets/img/soundly-dark.PNG">
-          </div>
-          <div id=list>
-              <ul id=#outer>
-                  <a href="#"><li>About Us</li></a>
-                  <a href="#"><li>Signs</li></a>
-                  <li class="dropdown" >
-                      <a href="#">Spaces</a>
-                     <ul hidden>
-                        <a><li>Live Interaction</li></a>
-                        <a><li>Post</li></a>
-                     </ul>
-                  </li>
-                  <li class="dropdown" >
-                    <a href="#">Practice</a>
-                   <ul hidden>
-                      <a href="#"><li>Practice</li></a>
-                      <a href="#"><li>Quiz</li></a>
-                      <a href="#"><li>Talk With ASL</li></a>
-                   </ul>
-                </li>
-
-                 <li class="dropdown" >
-                      <a href="#">Translate</a>
-                     <ul hidden>
-                        <a href="#"><li>English to ASL</li></a>
-                        <a href="#"><li>ASL to English</li></a>
-                     </ul>
-                  </li>
-
-                  <li class="dropdown" >
-                    <a href="#">Empower</a>
-                   <ul hidden>
-                      <a href="#"><li>Jobs Near Me</li></a>
-                      <a href="#"><li>Blogs</li></a>
-                     <a href="#"><li>Volunteer</li></a>
-                     <a href="#"><li>Connect With Volunteers</li></a>
-                   </ul>
-                </li>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto" href="#">About</a></li>
+            <li class="dropdown"><a href="#"><span>Spaces</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="#">Post</a></li>
+                <li><a href="#">Live Interaction</a></li>
               </ul>
-              <div class="login d-flex" >
-                  <button ><a href="#" style="margin: 0 15px;">Login</a></button>
-                  <i class="fas fa-toggle-off" style="font-size: 30px; margin: 5px;"></i>
-              </div>
-          </div>
-      </div>
-  </header>
+            </li>
+            <li><a class="nav-link scrollto" href="#">Signs</a></li>
+            <li class="dropdown"><a href="#"><span>Practice</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="#">Practice</a></li>
+                <li><a href="#">Quiz</a></li>
+                <li><a href="#">Talk With ASL</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="#"><span>Translate</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="#">English to ASL</a></li>
+                <li><a href="#">ASL to English</a></li>
+                <li><a href="#">Transcribe an Audio</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="#"><span>Empower</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="#">Jobs near me </a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Volunteer</a></li>
+                <li><a href="#">Connect with Volunteers</a></li>
+              </ul>
+            </li>
+            <li><a class="getstarted scrollto" href="#">Login</a></li>
+          </ul>
+        </nav><!-- .navbar -->
 
-<script>
+      </div><!-- End Header Container -->
+    </div>
+    <br>
+    <div>
+      <input type="checkbox" class="checkbox" id="checkbox">
+    <label for="checkbox" class="label">
+      <div class='ball'>
+    </label>
+  </div>
+  </header><!-- End Header -->
+
   
+<script>
+  const checkbox = document.getElementById('checkbox');
+
+checkbox.addEventListener('change', ()=>{
+  document.body.classList.toggle('dark');
+})
 </script>
 
   
