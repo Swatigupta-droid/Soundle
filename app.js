@@ -35,6 +35,11 @@ app.get("/",function(req,res){
     res.render("homepage");
 });
 
+app.get("/about",function(req,res){
+    res.render("about");
+});
+
+
 app.use(passport.initialize());
 app.use(passport.session());
 

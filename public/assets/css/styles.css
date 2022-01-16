@@ -9,20 +9,30 @@ body{
 body.dark
 {
   background-color: black;
+  background-image: url(https://media2.giphy.com/media/xVn3ZmKrKIOLS/giphy.gif?cid=ecf05e474ik8pzo1o8jvn9v7w7r8z5ysc5zvrbn8c5pf1660&rid=giphy.gif&ct=g);
 }
 body.dark a
 {
   color: black;
 }
-
+body.dark .ball
+{
+  background-color: #111;
+}
+body.dark .label
+{
+  background-color: white;
+}
 body.dark .circle
 {
   background-color: #616F39;
 }
-body.dark #container
+body.dark #container,body.dark .container11
 {
   background-color:#616F39;
+  color: #111;
 }
+
 
 /*------------------------------------------*/
 
