@@ -18,7 +18,21 @@ body.dark a
 body.dark .ball
 {
   background-color: #111;
+
 }
+body.dark .FAQ__title,body.dark .FAQ__visible 
+{
+  background-color: #111;
+  color: white;
+}
+body.dark .FAQ__visible >p
+{
+  color: white;
+}
+body.dark .FAQ__list__container
+{
+  border-top: 8px solid black;
+} 
 body.dark .label
 {
   background-color: white;
@@ -27,7 +41,7 @@ body.dark .circle
 {
   background-color: #616F39;
 }
-body.dark #container,body.dark .container11
+body.dark #container,body.dark .container11 
 {
   background-color:#616F39;
   color: #111;
@@ -53,6 +67,7 @@ body.dark #container,body.dark .container11
   padding: 5px;
   position: relative;
   transform: scale(1.5);
+  cursor: pointer;
 }
 
 .ball {
@@ -174,6 +189,9 @@ body.dark #container,body.dark .container11
   .navbar .getstarted:hover, .navbar .getstarted:focus:hover {
     color: #fff;
     background: #8BC34A;
+    padding: 12px 27px;
+    font-size: 15px;
+    font-weight: 500;
   }
   .navbar .dropdown ul {
     display: block;
