@@ -8,15 +8,7 @@ var express                 = require("express"),
     
 var app = express();
 
-const { MongoClient } = require('mongodb');
-const uri = process.env.MONGO_URL;
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-client.connect(err => {
-    console.log("Connected");
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
+mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true});
 
 app.use(express.static(__dirname + '/public'));
 
@@ -30,6 +22,43 @@ app.use(require("express-session")({
 
 app.set('view engine','ejs');
 
+const postSchema = {
+    title: String,
+    content: String,
+    img: String
+  };
+
+ const Post = mongoose.model("new", postSchema);
+
+ app.post("/create", function(req, res){
+
+    const post = new Post({
+      title: req.body.postHeading,
+      content: req.body.postContent,
+      img: req.body.postImg
+    });
+  
+  
+    post.save(function(err){
+      if(!err){
+        res.redirect("/create");
+      }
+      
+    });
+  });
+  app.get("/new/:postId", function(req, res){
+
+    const requestedPostId = req.params.postId;
+    
+      Post.find({_id: requestedPostId}, function(err, post){
+        res.render("new", {
+          title: post.title,
+          content: post.content,
+          img: post.img
+        });
+      });
+    
+    });
 
 app.get("/",function(req,res){
     res.render("homepage");
@@ -39,6 +68,26 @@ app.get("/about",function(req,res){
     res.render("about");
 });
 
+app.get("/post",function(req,res){
+    res.render("post");
+});
+app.get('/create',function(req,res)
+{
+    res.render('create')
+})
+app.get("/new", function(req, res){
+
+  
+    Post.find({}, function(err, post){
+      res.render("new", {
+        title: post.title,
+        content: post.content,
+        img: post.img,
+        posts:post
+      });
+    });
+  
+  });
 
 app.use(passport.initialize());
 app.use(passport.session());

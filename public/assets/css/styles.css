@@ -333,3 +333,110 @@ body.dark #container,body.dark .container11
     display: block;
   }
   
+/*------------FEED-------------*/
+
+.main-box
+{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    height: 100%;
+}
+.left-box
+{
+    flex:1;
+    border-right: 2px solid grey;
+    text-align: left;
+}
+.left-box li
+{
+    list-style: none;
+    margin: 15px;
+    width: 100%;
+}
+.middle-box
+{
+    flex: 4;
+    border-radius: 4px;
+}
+.left-box a
+{
+    color:#388E3C;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+.left-box a:active
+{
+    background-color: #388E3C;
+    color: white;
+}
+
+.post1,.create
+{
+    width: 95%; 
+    display:flex; 
+    flex-direction: row;
+    flex: 1; 
+    padding: 10px;
+    margin: 10px;
+    background-color: #388E3C;
+    color: white;
+    border: 1px gray solid;
+    border-radius: 8px;
+    font-weight: 500;
+    box-shadow: 2px 2px 2px 2px lightgray;
+}
+.post1 img
+{
+    border: 1px solid white;
+}
+.middle-box .btn
+{
+    background-color: white;
+    color: #388E3C;
+    font-weight: inherit;
+}
+.middle-box .btn:hover
+{
+  background-color: #388E3C;
+  color: white;
+}
+
+/*---------CREATE----------*/
+
+.create
+{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+}
+.create>input
+{
+    margin: 5px 17px;
+    width: 90%;
+    border: 1px solid #8BC34A;
+    border-radius:8px ;
+    color: #388E3C;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+}
+.create #content
+{
+    height:190px ;
+}
+#heading
+{
+    height: 30px;
+}
+#img-input
+{
+  width: 360px;
+  height: 50px;
+  background-color: white;
+  color: #388E3C;
+  padding: 8px;
+  text-align: center;
+}

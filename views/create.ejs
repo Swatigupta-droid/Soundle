@@ -1,0 +1,58 @@
+<%- include("partials/header"); -%>
+
+<br><br><br><br><br><br>
+
+<div class="main-box">
+    <div class="left-box">
+        <ul>
+            <li id="posts-left-box" >
+                <a href="/create" class="a" id="getsupport">Create posts</a>
+            </li>
+            <li id="posts-left-box">
+                <a href="/post" id="getsupport"  >Feed</a>
+            </li>
+            <li id="posts-left-box">
+                <a href="/new" id="getsupport"  >My Posts</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="middle-box">
+        <form action="/create" class="" method="post">
+        <section class="create">
+            <input type="text" id="heading" name="postHeading" placeholder="Title">
+            <input type="text" id="content" name="postContent" placeholder="What do you wanna Share?" >
+            <input type="text" id="img-input" name="postImg"  placeholder="Image link">
+            <button class="btn btn-success" id="btn" type="submit" name="button">Submit</button>
+        </section></form>
+    </div>
+</div>
+
+
+<style>
+body{
+    background-color: whitesmoke;
+}
+h4,.middle-box .btn
+{
+    margin-right: 15px;
+}
+.middle-box h1
+{
+    color: #388E3C;
+    margin-top: 20px;
+}
+ins
+{
+    padding: 5px 0;
+    width: 180px;
+    color: #388E3C;
+}
+.create .btn
+{
+    width: 20%;
+    align-self:flex-end;
+    background-color: whitesmoke;
+}
+</style>
+</body>

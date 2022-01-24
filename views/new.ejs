@@ -1,0 +1,50 @@
+<%- include("partials/header"); -%>
+<br><br><br><br><br><br>
+
+<div class="main-box">
+    <div class="left-box">
+        <ul>
+            <li id="posts-left-box"  >
+                <a href="/create" class="a" id="getsupport">Create posts</a>
+            </li>
+            <li id="posts-left-box">
+                <a href="/post" id="getsupport"  >Feed</a>
+            </li>
+            <li id="posts-left-box">
+                <a href="/new" id="getsupport"  >My Posts</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="middle-box">
+        <h1>My Posts</h1>
+        <% posts.forEach(function(post){ %>
+
+        <section class="post1">
+                        
+            <img src="<%= post.img %>" height="150" width="150" style="border-radius:20px;">
+            <ul>
+                <h4><b><%=post.title%></b></h4>
+                <p style="text-align: left;"><%=post.content%></p>
+                    <a href="/new/<%=post.title%>"><button class="btn btn-success">Explore</button></a>
+            </ul>
+            
+        </section>
+        <% }) %>
+    </div>
+</div>
+
+<style>
+    body{
+    background-color: whitesmoke;
+}
+h4,.middle-box .btn
+{
+    margin-right: 15px;
+}
+.middle-box h1
+{
+    color: #388E3C;
+    margin: 20px 0;
+}
+</style>
