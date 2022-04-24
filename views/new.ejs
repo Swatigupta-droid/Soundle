@@ -20,13 +20,13 @@
         <h1>My Posts</h1>
         <% posts.forEach(function(post){ %>
 
-        <section class="post1">
+        <section class="post1"> 
                         
             <img src="<%= post.img %>" height="150" width="150" style="border-radius:20px;">
             <ul>
                 <h4><b><%=post.title%></b></h4>
                 <p style="text-align: left;"><%=post.content%></p>
-                    <a href="/new/<%=post.title%>"><button class="btn btn-success">Explore</button></a>
+                    <a href="/post/<%=post.title%>"><button class="btn btn-success">Explore</button></a>
             </ul>
             
         </section>

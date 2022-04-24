@@ -1,0 +1,62 @@
+<%- include("partials/header"); -%>
+
+<br><br><br><br><br>
+<body>
+<h2 style="text-align: center;">Rooms</h2>
+<div class="big-box">
+    <div class="room">
+        <img src="https://thumbs.dreamstime.com/b/online-conference-icon-meeting-room-153070925.jpg" height="200" width="200">
+        <b><label>ROOM 1</label></b>
+        <p>Hey! nice meeting you. We have 30 people in this meeting.</p>
+    </div>
+    <div class="room">
+        <img src="https://thumbs.dreamstime.com/b/online-conference-icon-meeting-room-153070925.jpg" height="200" width="200">
+        <b><label>ROOM 2</label></b>
+        <p>Hey! nice meeting you. We have 30 people in this meeting.</p>
+    </div>
+    <div class="room">
+        <img src="https://thumbs.dreamstime.com/b/online-conference-icon-meeting-room-153070925.jpg" height="200" width="200">
+        <b><label>ROOM 3</label></b>
+        <p>Hey! nice meeting you. We have 30 people in this meeting.</p>
+    </div>
+    <div class="room">
+        <img src="https://thumbs.dreamstime.com/b/online-conference-icon-meeting-room-153070925.jpg" height="200" width="200">
+        <b><label>ROOM 4</label></b>
+        <p>Hey! nice meeting you. We have 30 people in this meeting.</p>
+    </div>
+
+</div>
+<div class="link">
+    <h4>Do you have a link?</h4>
+    <input placeholder="Enter the code" style="padding:10px; margin:10px;">
+    <button class="btn btn-primary" onclick="">Join</button>
+    <br><button class="btn btn-primary button" onclick="" style="margin: 10px;padding: 10px; background-color: whitesmoke; color: #388E3C;"><b>Generate a meeting</b></button>
+</div>
+</div>
+    
+</body>
+<style>
+    body
+    {
+        color: white;
+    }
+    .big-box 
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .room
+    {
+        margin-top: 60px;
+        display:flex;
+        flex-direction: column;
+        flex-wrap:wrap ;
+        width: 200px;    
+    }
+    img
+    {
+        border: 2px solid white;
+        border-radius: 4px;
+    }
+</style>

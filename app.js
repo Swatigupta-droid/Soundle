@@ -28,7 +28,15 @@ const postSchema = {
     img: String
   };
 
+const contentSchema={
+  heading:String,
+  para: String,
+  likes:String,
+  image:String
+}
+
  const Post = mongoose.model("new", postSchema);
+ const Content = mongoose.model("content", contentSchema);
 
  app.post("/create", function(req, res){
 
@@ -46,15 +54,15 @@ const postSchema = {
       
     });
   });
-  app.get("/new/:postId", function(req, res){
 
-    const requestedPostId = req.params.postId;
-    
-      Post.find({_id: requestedPostId}, function(err, post){
-        res.render("new", {
-          title: post.title,
-          content: post.content,
-          img: post.img
+  app.get("/post/:Post.title", function(req, res){
+
+      Content.find({}, function(err, post){
+        res.render("", {
+          heading:post.title,
+          para: post.content,
+          likes:Content.likes,
+          image:post.img
         });
       });
     
@@ -74,7 +82,31 @@ app.get("/post",function(req,res){
 app.get('/create',function(req,res)
 {
     res.render('create')
-})
+});
+app.get('/zoom',function(req,res)
+{
+    res.render('zoom')
+});
+app.get('/meet',function(req,res)
+{
+    res.render('meet')
+});
+app.get('/sign',function(req,res)
+{
+    res.render('sign')
+});
+app.get('/practice',function(req,res)
+{
+    res.render('practice')
+});
+app.get('/quiz',function(req,res)
+{
+  res.render('quiz')
+});
+app.get('/login',function(req,res)
+{
+  res.render('login')
+});
 app.get("/new", function(req, res){
 
   
